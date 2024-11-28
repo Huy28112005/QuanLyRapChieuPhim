@@ -1,9 +1,8 @@
 #include"Cinema.h"
-#include<conio.h>
 
 int main() {
 	Cinema cinema; 
-	int choice;
+	int luaChon;
 	do {
 		cout << "QUAN LY TAI CINEMA" << endl;
 		cout << "1. Khoi tao danh sach bo phim." << endl;
@@ -14,9 +13,10 @@ int main() {
 		cout << "6. Tim kiem bo phim theo khoang gia." << endl;
 		cout << "7. Sap xep danh sach bo phim." << endl;
 		cout << "8. Xoa bo phim." << endl;
+		cout<<"9. Thoat." << endl;
 		cout << "Chon mot tuy chon: ";
-		cin >> choice;
-		switch (choice)
+		cin >> luaChon;
+		switch (luaChon)
 		{
 		case 1:
 			cinema.nhap(); break;
@@ -82,10 +82,11 @@ int main() {
 			}
 			break;
 		}
+		case 9:
+			cout<<"\nThoat chuong trinh." << endl;
 		default:
 			cout << "Lua chon khong hop le!";
 		}
-		cout << "\nKet thuc chuong trinh thi nhan ESC, tiep tuc nhan phim bat ki." << endl;
-	} while (_getch()!=27);
+	} while (luaChon != 9);
 	return 0;
 }
