@@ -84,6 +84,7 @@ int main() {
 		}
 		case 9:
 			cout<<"\nThoat chuong trinh." << endl;
+			break;
 		default:
 			cout << "Lua chon khong hop le!";
 		}
